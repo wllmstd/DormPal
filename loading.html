@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ... (your existing head content) ... -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"></script>
+    <!-- ... (your existing script tags) ... -->
+
+    <!-- CSS for the GIF container -->
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #fff;
+        }
+
+        .gif-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <div class="gif-container">
+        <!-- Check the image path -->
+        <img src="assets/img/gif/splash.gif" alt="Animated GIF">
+    </div>
+
+    <script>
+        // JavaScript to control GIF display
+        document.addEventListener("DOMContentLoaded", function () {
+            var gifContainer = document.querySelector('.gif-container');
+            gifContainer.style.display = 'flex';
+
+            // Hide GIF container after 5 seconds
+            setTimeout(function () {
+                gifContainer.style.display = 'none';
+
+                // Redirect to main.html after 6 seconds
+                setTimeout(function () {
+                    window.location.href = 'dashboard.php';
+                }, 500); // 1000 milliseconds = 1 second
+            }, 4500);
+        });
+    </script>
+</body>
+
+</html>

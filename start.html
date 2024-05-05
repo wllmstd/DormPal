@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Example</title>
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the page was reloaded
+            if (performance.navigation.type === 1) {
+                // Redirect to splash.html
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+
+    <style>
+        body {
+            background-image: url('assets/img/icons/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Align items to the center */
+            overflow: hidden; /* To ensure no scrollbars */
+        }
+        a.button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #FF800D;
+            color: white;
+            text-decoration: none; /* Remove underline */
+            cursor: pointer;
+            margin-bottom: -100px; 
+            margin-right:1170px;
+            font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+
+        }
+    </style>
+        <link rel="icon" type="image/png" href="assets/img/icons/Logo.png">
+
+</head>
+<body>
+    <a href="index.php" class="button">Start Now</a>
+</body>
+</html>
